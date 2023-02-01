@@ -44,3 +44,10 @@ vim.keymap.set('x', '<A-j>', ":move '>+1<CR>gv-gv")
 vim.keymap.set('x', '<A-k>', ":move '<-2<CR>gv-gv")
 vim.keymap.set('i', '<A-j>', '<Esc>:move .+1<CR>==gi')
 vim.keymap.set('i', '<A-k>', '<Esc>:move .-2<CR>==gi')
+
+-- Faster scrolling
+vim.keymap.set('n', '<C-j>', '10j')
+vim.keymap.set('n', '<C-k>', '10k')
+
+-- Save and quit without :
+vim.keymap.set('n', '<leader>ww', ':w<CR>')
