@@ -277,6 +277,21 @@ use({
   end,
 })
 
+-- Database client
+use({
+    "kristijanhusak/vim-dadbod-ui",
+    requires = {
+        "tpope/vim-dadbod",
+        "kristijanhusak/vim-dadbod-completion",
+        "tpope/vim-dotenv",
+    },
+    cmd = "DBUI",
+    keys = "<leader><leader>db",
+    config = function ()
+        require('user/plugins/database')
+    end
+})
+
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
 if packer_bootstrap then

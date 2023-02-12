@@ -27,5 +27,7 @@ vim.cmd([[
   augroup end
 ]])
 
-vim.keymap.set('n', '<leader>n', ':NvimTreeOpen<CR>')
-vim.keymap.set('n', '<leader>m', ':NvimTreeFindFileToggle<CR>')
+vim.keymap.set('n', '<leader>tn', ':NvimTreeFindFile<CR>')
+vim.keymap.set('n', '<leader>tm', ':NvimTreeFindFileToggle<CR>')
+vim.keymap.set('n', '<leader>th', ':NvimTreeResize -50<CR>');
+vim.keymap.set('n', '<leader>tl', ':NvimTreeResize 90<CR>');
