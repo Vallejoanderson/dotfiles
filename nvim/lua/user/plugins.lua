@@ -292,6 +292,16 @@ use({
     end
 })
 
+-- Rest client
+use({
+    "NTBBloodbath/rest.nvim",
+    requires = { "nvim-lua/plenary.nvim" },
+    ft = "http",
+    config = function()
+        require('user/plugins/rest.lua')
+    end,
+})
+
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
 if packer_bootstrap then
