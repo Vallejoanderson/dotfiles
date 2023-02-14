@@ -298,7 +298,7 @@ use({
     requires = { "nvim-lua/plenary.nvim" },
     ft = "http",
     config = function()
-        require('user/plugins/rest.lua')
+        require('user/plugins/rest')
     end,
 })
 
