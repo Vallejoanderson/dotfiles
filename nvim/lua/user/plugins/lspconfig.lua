@@ -13,6 +13,11 @@ require('lspconfig').volar.setup({
     filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
 })
 
+-- Vue 2?
+-- require('lspconfig').vuels.setup({
+--     capabilities = capabilities,
+-- })
+
 -- JSON
 require('lspconfig').jsonls.setup({
   capabilities = capabilities,

@@ -1,0 +1,104 @@
+snippet vcgr "vue grid"
+	<template>
+		<div>
+			<FilterSlot
+				:filter-principal="filterPrincipal"
+				:filter="filters"
+				:total-rows="totalrows"
+				:paginate="paginate"
+				:start-page="startpage"
+				:to-page="toPage"
+				@reload="refreshtablrefExampleTable"
+				@reset-all-filters="refreshTable()"
+			>
+				<template #table>
+					<b-table
+						ref="refExampleTable"
+						id="table_id"
+						slot="table"
+						:items="myProvider"
+						small
+						:fields="fields"
+						primary-key="table_id"
+						table-class="text-nowrap"
+						responsive="sm"
+						show-empty
+						sticky-header="70vh"
+						:sort-by.sync="sortBy"
+						:sort-desc.sync="sortDesc"
+						:current-page="paginate.currentPage"
+						:per-page="paginate.perPage"
+						:busy.sync="isBusy"
+					>
+						<template #table-busy>
+							<div class="text-center text-primary my-2">
+								<b-spinner class="align-middle mr-1" />
+								<strong>Loading ...</strong>
+							</div>
+						</template>
+					</b-table>
+				</template>
+			</FilterSlot>
+			<someModalName
+				v-if="someModalNameOpened"
+				:active="someModalNameOpened"
+				@close="closeSomeModalName"
+			/>
+		</div>
+	</template>
+	<script>
+		import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
+		import Fields from "root/root";
+		import Filters from "root/root";
+		import someModalName from "root/root";
+		export default() {
+			components: {
+				someModalName,
+			},
+			props: {
+			},
+			data() {
+				return {
+					filterPrincipal: {
+						type: "input",
+						inputType: "text",
+		 				placeholder: "Search...",
+						model: "",
+					},
+					fields: Fields,
+					filters: Filters,
+					isBusy: false,
+					paginate: {
+					  currentPage: 1,
+					  perPage: 10,
+					},
+					totalRows: 0,
+					startPage: null,
+					sortBy: '',
+					sortDesc: true,
+					toPage: null,
+			},
+			created() {
+			},
+			mounted() {
+			},
+			methods: {
+				async myProvider() {
+					try{
+						const params = {
+						}
+					} catch(err) {
+						console.error(err);
+					}
+				},
+				async refreshTable() {
+					this.$refs.refExampleTable.refresh();
+				}
+			},
+			computed: {
+			},
+			watch: {
+			}
+		}
+	</script>
+	<style scoped></style>
