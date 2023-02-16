@@ -12,6 +12,7 @@ vim.cmd([[
 
 telescope.setup({
   defaults = {
+    winblend = 90,
     path_display = { truncate = 1 },
     prompt_prefix = '   ',
     selection_caret = '  ',
@@ -44,6 +45,9 @@ telescope.setup({
     lsp_references = {
       previewer = false,
     },
+    live_grep = {
+      prompt_title = 'Find Files In Active Buffers'
+    }
   },
 })
 

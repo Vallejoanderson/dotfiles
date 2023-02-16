@@ -53,3 +53,7 @@ vim.keymap.set('n', '<A-l>', '10l')
 
 -- Save and quit without :
 vim.keymap.set('n', '<leader>ww', ':w<CR>')
+
+-- Split current window
+vim.keymap.set('n', '<C-A-v>', ':vertical split<CR>')
+vim.keymap.set('n', '<C-A-h>', ':horizontal split<CR>')
