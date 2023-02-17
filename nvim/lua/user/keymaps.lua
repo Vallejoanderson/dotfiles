@@ -57,3 +57,6 @@ vim.keymap.set('n', '<leader>ww', ':w<CR>')
 -- Split current window
 vim.keymap.set('n', '<C-A-v>', ':vertical split<CR>')
 vim.keymap.set('n', '<C-A-h>', ':horizontal split<CR>')
+
+-- Formatting shortcut
+vim.keymap.set('n', '<leader>F', ':Format<CR>2<CR>')
