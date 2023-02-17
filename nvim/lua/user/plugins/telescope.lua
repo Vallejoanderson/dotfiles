@@ -12,7 +12,6 @@ vim.cmd([[
 
 telescope.setup({
   defaults = {
-    winblend = 90,
     path_display = { truncate = 1 },
     prompt_prefix = '   ',
     selection_caret = '  ',
